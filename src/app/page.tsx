@@ -14,19 +14,8 @@ import ABI from "../contracts/ABI.json";
 import { ThirdwebStorage } from "@thirdweb-dev/storage";
 import { Configuration, OpenAIApi } from "openai";
 import Link from "next/link";
-const contractAddresses = {
-  997: "0x1a8784a45731F889D4a92258AE7E149d5C737AA1", // 5ire
-  5001: "0x9B37654fc8d92cfdd3CF7bc8b507aefc34E795E0", // Mantle
-  5: "0xA72e987B2c8e289C16FFb9107eF9942dB8872128", // Goerli
-};
 
-const explorerURLs = {
-  997: "https://explorer.5ire.network/evm/tx/", // 5ire
-  5001: "https://explorer.testnet.mantle.xyz/tx/", // Mantle
-  5: "https://goerli.etherscan.io/tx/", // Goerli
-};
-
-// const contractAddress = "0x1a8784a45731F889D4a92258AE7E149d5C737AA1";
+const contractAddress = "0xA4CCEb9e84b9682ca559AA41DB57f4BECe586dc5";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,7 +69,7 @@ export default function Home() {
   };
 
   const prepareContractWrite = usePrepareContractWrite({
-    address: "0x1a8784a45731F889D4a92258AE7E149d5C737AA1",
+    address: "0xA4CCEb9e84b9682ca559AA41DB57f4BECe586dc5",
     abi: ABI,
     functionName: "safeMint",
     args: [address, metadata],
