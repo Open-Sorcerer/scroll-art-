@@ -96,9 +96,8 @@ export default function Home() {
       console.log(res.hash);
       // showcase the transaction hash
       // append the transaction hash to the url
-      // url = https://testnet.ftmscan.com/tx/${res.hash}
-      // 5ire chain URL = https://explorer.5ire.network/evm/tx/${res.hash}
-      setForged(`https://explorer.5ire.network/evm/tx/${res.hash}`);
+
+      setForged(`https://blockscout.scroll.io/tx/${res.hash}`);
       setExplosion(true);
       setTimeout(function () {
         setExplosion(false);
